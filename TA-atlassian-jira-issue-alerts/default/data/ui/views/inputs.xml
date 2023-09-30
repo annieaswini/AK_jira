@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<view template="TA-atlassian-jira-issue-alerts:templates/base.html" type="html" isDashboard="False">
+    <label>Inputs</label>
+</view>

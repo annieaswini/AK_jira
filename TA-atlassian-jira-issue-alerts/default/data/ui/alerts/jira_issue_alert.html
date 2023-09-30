@@ -1,0 +1,187 @@
+<form class="form-horizontal form-complex">
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_project">Project <span class="required">*</span> </label>
+        <div class="controls">
+            <input type="text" style="width: 270px; max-width: 270px;" name="action.jira_issue_alert.param.project" id="jira_issue_alert_project"/>
+
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+        <span class="help-block" style="position: static; width:auto;">
+                    Indicate a <span class="mono-space">Project key</span> for Jira issue. Ensure that project key exists.
+                    <br />
+                    Don't use project id or project full name. Allowed only project key.
+                    <br />
+            <strong>Sample:</strong> CORP
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_summary">Summary <span class="required">*</span> </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;" name="action.jira_issue_alert.param.summary" id="jira_issue_alert_summary" placeholder="Splunk Alert: $name$"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+        <span class="help-block" style="position: static; width:auto;">
+                    Indicate a <span class="mono-space">Summary</span> for Jira issue.
+                    <br />
+                    The Summary can include tokens that insert text based on the results of the search
+                    <a href="{{SPLUNKWEB_URL_PREFIX}}/help?location=learnmore.alert.email.tokens" target="_blank"
+                       title="Splunk help">Learn More <i class="icon-external"></i></a>
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_issue_type">Issue Type <span class="required">*</span> </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.issue_type" id="jira_issue_alert_issue_type"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate an <span class="mono-space">Issue Type</span> for Jira issue.
+                    <br />
+                    <strong>Sample:</strong> Task or Bug or etc.
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_priority">Priority <span class="required">*</span> </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.priority" id="jira_issue_alert_priority"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate a <span class="mono-space">Priority</span> for Jira issue.
+                    <br />
+                    <strong>Sample:</strong> P1 or P2 or etc.
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_description">Description <span class="required">*</span> </label>
+        <div class="controls">
+	<textarea style="width: 270px; max-width: 270px; height: 60px;"  name="action.jira_issue_alert.param.description" id="jira_issue_alert_description"
+              placeholder="The alert condition for '$name$' was triggered."></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate a <span class="mono-space">Description</span> for Jira issue
+                    <br />
+                    Description can include tokens that insert text based on the results of the search
+                    <a href="{{SPLUNKWEB_URL_PREFIX}}/help?location=learnmore.alert.email.tokens" target="_blank"
+                       title="Splunk help">Learn More <i class="icon-external"></i></a>
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_assignee">Assignee  </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.assignee" id="jira_issue_alert_assignee"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+          <span class="help-block" style="position: static; width:auto;">
+                    Indicate an <span class="mono-space">Assignee</span> for Jira issue. Ensure that assignee exists.
+                    <br />
+                    Use username to assign issue to specific user.
+                    <br />
+                    Use -1 for automatic assignment.
+                    <br />
+                    Leave empty to remove the assignee.
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_labels">Labels  </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.labels" id="jira_issue_alert_labels"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate <span class="mono-space">Labels</span> for Jira issue. Type labels separated by commas.
+                    <br />
+                    <strong>Sample:</strong> label1, label2, label3
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_components">Component/s  </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.components" id="jira_issue_alert_components"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate <span class="mono-space">Components</span> for Jira issue. Type components separated by commas. Ensure that components exist.
+                    <br />
+                    <strong>Sample:</strong> component1, component2, component3
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_additional_field_1_name">Additional field  1 - name  </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.additional_field_1_name" id="jira_issue_alert_additional_field_1_name"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate an <span class="mono-space">Additional field name</span> for Jira issue. Ensure that additional field exists.
+                    <br />
+                    <strong>Sample:</strong> You_customer_field_name_in_Jira
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_additional_field_1_value">Additional field  1 - value  </label>
+        <div class="controls">
+            <input type="text"  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.additional_field_1_value" id="jira_issue_alert_additional_field_1_value"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate an <span class="mono-space">Additional field value</span> for Jira issue. Ensure that additional field value exists.
+                    <br />
+                    Use the same text of additional field value as in Jira interface
+                </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="jira_issue_alert_append_alert_result">Append alert result  </label>
+        <div class="controls">
+            <select  style="width: 270px; max-width: 270px;"  name="action.jira_issue_alert.param.append_alert_result" id="jira_issue_alert_append_alert_result">
+                <option value="1">None</option>
+                <option value="2">Table</option>
+                <option value="3">Code Snippet</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+                <span class="help-block" style="position: static; width:auto;">
+                    Indicate if you want to append alert result at the end of Jira issue description. If the result is more than 32000 symbols then it is cut.
+                    <br />
+                     <strong>None</strong>: nothing will be added
+                        <br />
+                    <strong>Table</strong>: Results are in a table view where the table header consists of alert result fields.
+                         <br />
+                    <strong>Code Snippet</strong>: Results are in code snippet view.
+                </span>
+        </div>
+    </div>
+</form>
